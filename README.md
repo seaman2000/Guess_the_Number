@@ -4,9 +4,7 @@ A console-based number guessing game written in Python.
 This is my first more complex Python exercise, focused on control flow, input validation, and game logic.
 
 ---
-
-## 🕹️ Game Description
-
+## 🕹️ Game Description -> [*`Guess the number`*](guess_the_number.py)
 The player must guess a randomly generated number within a limited number of attempts.
 
 ### Features:
