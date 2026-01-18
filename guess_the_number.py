@@ -9,8 +9,11 @@ min_size = float('inf')
 is_guessed = False
 closest_number = None
 troll_counter = 0
+is_invalid = False
 
 while True:
+    is_invalid = False
+    player_number = None
     if counter == 0: #choose difficulty
         difficulty = input("Choose difficulty between Easy, Medium or Hard: ").strip().lower()
         if difficulty == "easy":
@@ -22,14 +25,18 @@ while True:
         else:
             print("Invalid difficulty. Please, choose between Easy, Medium or Hard.")
             continue
+        troll_counter = 0
         computer_number = random.randint(1, max_number)
     player_input = input(f"Guess the number (1-{max_number}): ").strip()
     if not player_input.isdigit():
         print("Invalid input. Try again...")
-        continue
-    player_number = int(player_input)
-    if not player_number in range(1, max_number + 1):
-        print(f"Please type a number which is between (1-{max_number})")
+        is_invalid = True
+    else:
+        player_number = int(player_input)
+        if not player_number in range(1, max_number + 1):
+            print(f"Please type a number which is between (1-{max_number})")
+            is_invalid = True
+    if is_invalid:
         troll_counter += 1
         if troll_counter == 3:
             print("You're joking...")
@@ -62,7 +69,6 @@ while True:
         while answer != "Y" and answer != "N":
             answer = input("I said Y or N!!!").strip().upper()
         if answer == "Y":
-            troll_counter = 0
             closest_number = None
             player_guesses = []
             counter = 0
