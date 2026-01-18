@@ -29,7 +29,7 @@ while True:
         continue
     player_number = int(player_input)
     if not player_number in range(1, max_number + 1):
-        print(f"Please type a number which is from (1-{max_number})")
+        print(f"Please type a number which is between (1-{max_number})")
         troll_counter += 1
         if troll_counter == 3:
             print("You're joking...")
@@ -57,7 +57,7 @@ while True:
             print(f"From your guessed numbers, the closest was {closest_number}, "
                   f"{min_size} numbers away from the target.")
         print("Do you want to play again?")
-        answer = input("Y or N")
+        answer = input("Y or N ")
         answer = answer.strip().upper()
         while answer != "Y" and answer != "N":
             answer = input("I said Y or N!!!").strip().upper()
@@ -73,8 +73,9 @@ while True:
             else:
                 games_counter += 1
                 continue
-        elif answer == "N":
+        else:
             break
 if not is_guessed:
     print(f"The number to guess was: {computer_number}")
+
 
