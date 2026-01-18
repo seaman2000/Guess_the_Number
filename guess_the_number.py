@@ -29,8 +29,9 @@ while True:
             difference = abs(each_integer - computer_number)
             if difference < min_size:
                 min_size = difference
-        print("You were so close though!")
-        print(f"From your guessed numbers, the closest of yours was {min_size} numbers from the target.")
+        if min_size <= 5:
+            print("You were so close though!")
+            print(f"From your guessed numbers, the closest of yours was {min_size} numbers from the target.")
         print("Do you want to try again?")
         answer = input("Y or N")
         if answer == "Y":
@@ -47,5 +48,5 @@ while True:
     player_guesses += player_input
 
 if not is_guessed:
-    print(computer_number)
+    print(f"The number to guess was: {computer_number}")
 
