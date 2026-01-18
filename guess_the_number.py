@@ -12,6 +12,7 @@ min_size = float('inf')
 
 is_guessed = False
 is_invalid = False
+difficulty_chosen = False
 
 closest_number = None
 
@@ -19,7 +20,7 @@ while True:
     is_invalid = False
     player_number = None
 
-    if counter == 0:  # choose difficulty
+    if not difficulty_chosen:  # choose difficulty
         difficulty = input("Choose difficulty between Easy, Medium or Hard: ").strip().lower()
 
         if difficulty == "easy":
@@ -34,6 +35,7 @@ while True:
 
         troll_counter = 0
         computer_number = random.randint(1, max_number)
+        difficulty_chosen = True
 
     player_input = input(f"Guess the number (1-{max_number}): ").strip()
 
@@ -90,6 +92,7 @@ while True:
             player_guesses = []
             counter = 0
             min_size = float('inf')
+            difficulty_chosen = False
 
             if games_counter >= 3:
                 print("I am too tired for this, I need a break.")
