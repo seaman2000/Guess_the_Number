@@ -68,8 +68,7 @@ while True:
             print(f"From your guessed numbers, the closest was {closest_number}, "
                   f"{min_size} numbers away from the target.")
         print("Do you want to play again?")
-        answer = input("Y or N ")
-        answer = answer.strip().upper()
+        answer = input("Y or N ").strip().upper()
         while answer != "Y" and answer != "N":
             answer = input("I said Y or N!!!").strip().upper()
         if answer == "Y":
