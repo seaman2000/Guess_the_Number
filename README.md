@@ -1,4 +1,4 @@
-# 🎯 Number Guessing Game (Python)
+# 🎯 Number Guessing Game
 
 A console-based number guessing game written in Python.  
 This is my first more complex Python exercise, focused on control flow, input validation, and game logic.
