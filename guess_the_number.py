@@ -3,13 +3,17 @@ import random
 computer_number = 0
 max_number = 0
 counter = 0
-games_counter = 1
-player_guesses = []
-min_size = float('inf')
-is_guessed = False
-closest_number = None
 troll_counter = 0
+games_counter = 1
+
+player_guesses = []
+
+min_size = float('inf')
+
+is_guessed = False
 is_invalid = False
+
+closest_number = None
 
 while True:
     is_invalid = False
