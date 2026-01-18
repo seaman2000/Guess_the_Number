@@ -13,7 +13,7 @@ min_size = float('inf')
 is_guessed = False
 is_invalid = False
 difficulty_chosen = False
-showing_guess_number = True
+show_guess_number = True
 
 closest_number = None
 
@@ -53,7 +53,7 @@ while True:
         troll_counter += 1
         if troll_counter == 3:
             print("You're joking...")
-            showing_guess_number = False
+            show_guess_number = False
             break
         continue
 
@@ -98,7 +98,7 @@ while True:
 
             if games_counter >= 3:
                 print("I am too tired for this, I need a break.")
-                showing_guess_number = False
+                show_guess_number = False
                 break
 
             games_counter += 1
@@ -106,7 +106,7 @@ while True:
         else:
             break
 
-if not is_guessed and showing_guess_number:
+if not is_guessed and show_guess_number:
     print(f"The number to guess was: {computer_number}")
 
 
