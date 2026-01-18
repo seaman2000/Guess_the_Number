@@ -87,7 +87,7 @@ while True:
         answer = input("Y or N ").strip().upper()
 
         while answer != "Y" and answer != "N":
-            answer = input("I said Y or N!!! ").strip().upper()
+            answer = input("I said Y or N !!! ").strip().upper()
 
         if answer == "Y":
             closest_number = None
